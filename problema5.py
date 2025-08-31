@@ -1,3 +1,10 @@
+'''Uma empresa fabrica dois produtos, A e B. O volume de vendas de A é de no mínimo 80% do total de vendas de ambos (A e B) 
+   Contudo, a empresa não pode vender mais do que 100 unidades de A por dia. 
+   Ambos os produtos usam uma matéria-prima cuja disponibilidade máxima diária é 240 Ib.
+   As taxas de utilização da matéria-prima são 2 lb por unidade de A e 4 lb por unidade de B. 
+   Os lucros unitários para A e B são $ 20 e $ 50, respectivamente. 
+   Determine o mix de produto ótimo para a empresa.'''
+
 import sys
 from config import setup_ampl
 

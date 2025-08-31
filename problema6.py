@@ -1,3 +1,7 @@
+'''A Alumeo fabrica chapas e barras de alumínio. A capacidade máxima de produção estimada são 800 chapas ou 600 barras por dia. 
+   À demanda máxima diária são 550 chapas e 580 barras. O lucro por tonelada é $ 40 por chapa e $ 35 por barra. 
+   Determine o mix ótimo de produção diária.'''
+
 import sys
 from config import setup_ampl
 

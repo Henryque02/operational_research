@@ -8,6 +8,3 @@ def setup_ampl():
     ampl = AMPL()
     ampl.eval("option solver cbc;")
     return ampl
-
-
-    
