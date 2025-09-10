@@ -11,8 +11,8 @@ from config import setup_ampl
 ampl = setup_ampl()
 
 ampl.eval('''
-    var componente_x >= 0 integer;
-    var componente_y >= 0 integer;
+    var componente_x >= 0;
+    var componente_y >= 0;
     minimize z: 2*componente_x + 4.50*componente_y;
     subject to
         min_ram: 20*componente_x + 5*componente_y >= 80;

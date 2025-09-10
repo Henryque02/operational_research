@@ -8,8 +8,8 @@ from config import setup_ampl
 ampl = setup_ampl()
 
 ampl.eval('''
-    var chapa >= 0 integer;
-    var barra >= 0 integer;
+    var chapa >= 0;
+    var barra >= 0;
     maximize z: 35*barra + 40*chapa;
     subject to
         demanda_de_chapas: chapa <= 550;

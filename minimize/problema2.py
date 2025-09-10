@@ -14,11 +14,11 @@ from config import setup_ampl
 ampl = setup_ampl()
 
 ampl.eval('''
-    var CulturaA >= 0 integer;
-    var CulturaB >= 0 integer;
-    var CulturaC >= 0 integer;
-    var CulturaD >= 0 integer;
-    var CulturaE >= 0 integer;
+    var CulturaA >= 0;
+    var CulturaB >= 0;
+    var CulturaC >= 0;
+    var CulturaD >= 0;
+    var CulturaE >= 0;
 
     minimize z: CulturaA + 2.5*CulturaB + 1.8*CulturaC + 2*CulturaD + 3*CulturaE;
     subject to
