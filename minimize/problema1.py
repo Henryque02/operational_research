@@ -19,6 +19,6 @@ ampl.eval('''
         min_chipset: 3*componente_x + 40*componente_y >= 25;
 ''')
 ampl.solve()
-print(f"resultado: {ampl.getObjective('z').value()}")
+print(f"custo mínimo: {ampl.getObjective('z').value()}")
 print(f"componente_x = {ampl.getVariable('componente_x').value()}")
 print(f"componente_y = {ampl.getVariable('componente_y').value()}")

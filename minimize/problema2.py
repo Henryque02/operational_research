@@ -26,7 +26,7 @@ ampl.eval('''
         min_fertilizante_kg: 5*CulturaA + 10*CulturaB + 8*CulturaC + 4*CulturaD + 12*CulturaE >= 100;
 ''')
 ampl.solve()
-print(f"resultado: {ampl.getObjective('z').value()}")
+print(f"custo mínimo: {ampl.getObjective('z').value()}")
 print(f"CulturaA = {ampl.getVariable('CulturaA').value()}")
 print(f"CulturaB = {ampl.getVariable('CulturaB').value()}")
 print(f"CulturaC = {ampl.getVariable('CulturaC').value()}")

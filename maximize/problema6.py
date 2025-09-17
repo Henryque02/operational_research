@@ -18,6 +18,6 @@ ampl.eval('''
 ''')
 
 ampl.solve()
-print(f"resultado: {ampl.getObjective('z').value()}")
+print(f"Lucro ótimo: {ampl.getObjective('z').value()}")
 print(f"chapa = {ampl.getVariable('chapa').value()}")
 print(f"barra = {ampl.getVariable('barra').value()}")
