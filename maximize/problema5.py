@@ -5,8 +5,11 @@
    Os lucros unitários para A e B são $ 20 e $ 50, respectivamente. 
    Determine o mix de produto ótimo para a empresa.'''
 
-import sys
+#import sys
+#from config import setup_ampl
+
 from config import setup_ampl
+
 
 ampl = setup_ampl()
 

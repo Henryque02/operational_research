@@ -1,6 +1,5 @@
 # Ambiente virtual Python
-venv/
-env/
+ampl_venv/
 
 # Arquivos Python compilados
 *.pyc
