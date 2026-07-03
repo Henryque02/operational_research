@@ -1,7 +1,9 @@
 [project]
 name = "operational-research"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Linear programming and optimization problems solved with AMPL (amplpy) and a from-scratch Simplex implementation — coursework portfolio from Operations Research at UFG."
+readme = "README.md"
+authors = [{ name = "Henryque" }]
 requires-python = ">=3.12"
 dependencies = [
     "amplpy>=0.15.2",
@@ -9,3 +11,10 @@ dependencies = [
     "numpy>=2.3.4",
     "pandas>=2.3.3",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/operational_research"]
