@@ -3,6 +3,42 @@ revision = 3
 requires-python = ">=3.12"
 
 [[package]]
+name = "ampl-module-base"
+version = "20260520"
+source = { registry = "https://pypi.ampl.com/" }
+wheels = [
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-base/ampl_module_base-20260520-py3-none-macosx_10_9_universal2.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-base/ampl_module_base-20260520-py3-none-macosx_10_9_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-base/ampl_module_base-20260520-py3-none-manylinux2010_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-base/ampl_module_base-20260520-py3-none-manylinux2014_aarch64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-base/ampl_module_base-20260520-py3-none-win_amd64.whl" },
+]
+
+[[package]]
+name = "ampl-module-cbc"
+version = "20251121"
+source = { registry = "https://pypi.ampl.com/" }
+wheels = [
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-cbc/ampl_module_cbc-20251121-py3-none-macosx_10_9_universal2.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-cbc/ampl_module_cbc-20251121-py3-none-macosx_10_9_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-cbc/ampl_module_cbc-20251121-py3-none-manylinux2010_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-cbc/ampl_module_cbc-20251121-py3-none-manylinux2014_aarch64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-cbc/ampl_module_cbc-20251121-py3-none-win_amd64.whl" },
+]
+
+[[package]]
+name = "ampl-module-highs"
+version = "20260611"
+source = { registry = "https://pypi.ampl.com/" }
+wheels = [
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-highs/ampl_module_highs-20260611-py3-none-macosx_10_9_universal2.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-highs/ampl_module_highs-20260611-py3-none-macosx_10_9_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-highs/ampl_module_highs-20260611-py3-none-manylinux2010_x86_64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-highs/ampl_module_highs-20260611-py3-none-manylinux2014_aarch64.whl" },
+    { url = "https://portal.ampl.com/dl/pypi/ampl-module-highs/ampl_module_highs-20260611-py3-none-win_amd64.whl" },
+]
+
+[[package]]
 name = "amplpy"
 version = "0.15.2"
 source = { registry = "https://pypi.org/simple" }
@@ -417,9 +453,12 @@ wheels = [
 
 [[package]]
 name = "operational-research"
-version = "0.1.0"
-source = { virtual = "." }
+version = "1.0.0"
+source = { editable = "." }
 dependencies = [
+    { name = "ampl-module-base" },
+    { name = "ampl-module-cbc" },
+    { name = "ampl-module-highs" },
     { name = "amplpy" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -428,6 +467,9 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "ampl-module-base", specifier = ">=20260520", index = "https://pypi.ampl.com/" },
+    { name = "ampl-module-cbc", specifier = ">=20251121", index = "https://pypi.ampl.com/" },
+    { name = "ampl-module-highs", specifier = ">=20260611", index = "https://pypi.ampl.com/" },
     { name = "amplpy", specifier = ">=0.15.2" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "numpy", specifier = ">=2.3.4" },

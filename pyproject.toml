@@ -6,6 +6,9 @@ readme = "README.md"
 authors = [{ name = "Henryque" }]
 requires-python = ">=3.12"
 dependencies = [
+    "ampl-module-base>=20260520",
+    "ampl-module-cbc>=20251121",
+    "ampl-module-highs>=20260611",
     "amplpy>=0.15.2",
     "matplotlib>=3.10.7",
     "numpy>=2.3.4",
@@ -18,3 +21,13 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/operational_research"]
+
+[[tool.uv.index]]
+name = "ampl"
+url = "https://pypi.ampl.com"
+explicit = true
+
+[tool.uv.sources]
+ampl-module-base = { index = "ampl" }
+ampl-module-cbc = { index = "ampl" }
+ampl-module-highs = { index = "ampl" }
